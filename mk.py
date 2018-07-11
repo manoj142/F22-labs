@@ -49,3 +49,8 @@ for key in data:
                     inv[word].append(a[i]['company']['title'])
                 else:
                     inv[word].append(a[i]['company']['title'])
+
+
+for k in sorted(inv,key=lambda k:len(inv[k])):
+    print(k+":")
+    print(inv[k])
