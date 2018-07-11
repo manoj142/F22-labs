@@ -17,5 +17,12 @@ for key in data:
                         inv[k].append(a[i]['company']['title'])
                     else :
                         inv[k].append(a[i]['company']['title'])
-                        
-      
+            elif ',' in word and 'and' not in word:
+                arr=word.split(',')
+                for j in range(0,len(arr)):
+                    k=arr[j].strip()
+                    if k not in inv:
+                        inv[k]=[]
+                        inv[k].append(a[i]['company']['title'])
+                    else:
+                        inv[k].append(a[i]['company']['title'])
