@@ -26,3 +26,26 @@ for key in data:
                         inv[k].append(a[i]['company']['title'])
                     else:
                         inv[k].append(a[i]['company']['title'])
+            elif ',' in word and 'and' in word:
+                arr=word.split('and')
+                arr1=arr[0].split(',')
+                for j in range(0,len(arr1)-1):
+                    k=arr1[j].strip()
+                    if k not in inv:
+                        inv[k]=[]
+                        inv[k].append(a[i]['company']['title'])
+                    else:
+                        inv[k].append(a[i]['company']['title'])
+                k=arr[len(arr)-1].strip()
+                if k not in inv:
+                    inv[k]=[]
+                    inv[k].append(a[i]['company']['title'])
+                else:
+                    inv[k].append(a[i]['company']['title'])
+   
+            else:
+                if word not in inv:
+                    inv[word]=[]
+                    inv[word].append(a[i]['company']['title'])
+                else:
+                    inv[word].append(a[i]['company']['title'])
